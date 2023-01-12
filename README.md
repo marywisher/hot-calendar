@@ -10,7 +10,7 @@
 |  cellMargin  |  String  |  '0.21em'  |  支持px，em，rpx，%，单元格纵向间距，需要扣除2px cell border  |
 |  cellData  |  Array  |  []  |  必填，单元格的数量值，着色的重要指标，默认0为空白格，100为无色不可点击格  |
 |  showDay  |  Boolean  |  false  |  日历是否显示日期  |
-|  showEarly  |  Boolean  |  false  |  早于记录的日历是否显示  |
+|  showEarly  |  Boolean  |  false  |  早于cellData的日历是否显示  |
 |  level1  |  Number  |  1  |  着色等级，最低级  |
 |  level2  |  Number  |  3  |  着色等级  |
 |  level3  |  Number  |  6  |  着色等级  |
@@ -28,6 +28,22 @@
 <hot-calendar cellWidth="46rpx" cellMargin="6rpx" :cellData="hotCalendarArr" :showDay="true"
 					:showEarly="true" :pointDay="dateStr" @cellTap="hotCalendarClick"></hot-calendar>
 ```
+
+## cellData格式样例：
+```
+[
+	[[0],[0],[0],[0],[1],[0],[0]],
+	[[0],[1],[0],[0],[1],[1],[0]],
+	[[0],[0],[0],[0],[1],[1],[1]],
+	[[0],[1],[1],[1],[1],[1],[0]],
+	[[0],[0],[0],[0],[0],[0],[0]],
+	[[0],[1],[1],[1],[1],[0],[0]],
+	[[0],[0],[0],[0],[0],[0],[0]],
+	[[0],[1],[1],[1],[1],[100],[100]]
+]
+```
           
 ## 其它说明：
 本插件可搭配scroll-view，实现左右灵活拖动
+欢迎大家下载使用，多提宝贵意见和建议！
+如遇问题，请加qq 63846152
