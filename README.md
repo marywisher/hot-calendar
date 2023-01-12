@@ -19,12 +19,15 @@
 |  pointDay  |  String  |  ''  |  格式为'Y-m-d'，着重框所在的日期，默认是当天  |
 
 ## 插件事件：
-事件名     说明            返回值
-@cellTap  单元格点击事件   String，格式为'Y-m-d'，单元格日期
+|  事件名  |  说明  |  返回值  |
+|  ----  | ----  |  ----  |
+|  @cellTap  |  单元格点击事件  |  String，格式为'Y-m-d'，单元格日期  |
 
 ## 示例：
+```
 <hot-calendar cellWidth="46rpx" cellMargin="6rpx" :cellData="hotCalendarArr" :showDay="true"
 					:showEarly="true" :pointDay="dateStr" @cellTap="hotCalendarClick"></hot-calendar>
+```
           
 ## 其它说明：
 本插件可搭配scroll-view，实现左右灵活拖动
