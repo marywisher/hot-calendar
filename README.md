@@ -1,6 +1,5 @@
 # hot-calendar
-- 本人开发的一款uni-app前端插件
-- https://ext.dcloud.net.cn/plugin?id=10642
+- 本人开发的一款uni-app前端插件 [链接](https://ext.dcloud.net.cn/plugin?id=10642)
 
 ## 插件属性:
 |  属性名  |  类型  |  默认值  |  说明  |
