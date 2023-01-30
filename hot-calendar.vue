@@ -117,7 +117,7 @@
 						return this.levelUnlimit;
 					}
 					if(!Array.isArray(this.cellData) || this.cellData.length == 0) return 0;
-					
+					//console.log(this.cellData)
 					let inputData = this.cellData[i][j];
 					if(inputData >= this.levelUnlimit){
 						if(this.showEarly == false) return this.levelUnlimit;//过早不显示
@@ -173,6 +173,9 @@
 				let d = new Date();
 				this.innerTitle = d.getFullYear() + '年';
 				
+				if(this.cellData.length)
+					this.weekNum = Math.max(this.cellData.length, this.weekNum);
+				
 				let y = d.getFullYear();
 				let m = d.getMonth() + 1 < 10 ? "0" + (d.getMonth() + 1) : d.getMonth() + 1;
 				let r = d.getDate() < 10 ? "0" + d.getDate() : d.getDate();
@@ -183,7 +186,8 @@
 				//console.log(this.crtDay)
 				//this.todayDay = y + '-' + m + '-' + r;
 				//console.log(this.todayDay)
-				this.weekNum = Math.max(this.cellData.length, this.weekNum);
+				//console.log(this.weekNum)
+				//console.log(this.cellData.length)
 				d.setDate(d.getDate() - (d.getDay() + 7 * (this.weekNum - 1) + 1));//推算第一天的前一天日期
 				let tmpMon = ''
 				for(let i = 0; i < this.weekNum; i ++){
